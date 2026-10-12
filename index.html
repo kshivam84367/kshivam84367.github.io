@@ -3,87 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>All in One Sewa - Full Database</title>
+<title>All in One Sewa - Fixed</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#f0f4f8}
-.header{background:white;text-align:center;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.06);position:sticky;top:0;z-index:5}
-.logo{width:80px;height:80px;background:#0b5be0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:30px;margin:0 auto;font-weight:800}
-.title{color:#0b5be0;font-size:26px;font-weight:800}
-.bluebar{background:#0b5be0;color:white;text-align:center;padding:9px;font-size:13px}
-.bluebar b{color:#ffeb3b}
-.box{background:white;margin:12px;border-radius:18px;padding:14px}
-.search{width:100%;padding:12px;border:2px solid #0b5be0;border-radius:30px;outline:none}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px 90px}
-.card{background:white;border-radius:18px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.05);cursor:pointer}
-.card b{font-size:15px}
-.cbtn{background:#0b5be0;color:white;padding:7px 16px;border-radius:20px;margin-top:8px;display:inline-block;font-size:12px;font-weight:700}
-.float{position:fixed;bottom:16px;right:12px;background:linear-gradient(90deg,#0b3d91,#1e88e5);color:white;padding:13px 16px;border-radius:30px;border:none;font-weight:800;z-index:999;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
-.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:1000;display:none;overflow:auto}
-.mbox{background:#f1f5f9;min-height:100vh}
-.mhead{background:white;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-.mcontent{padding:10px}
-.docCard{background:white;border-radius:14px;padding:10px;display:flex;gap:10px;margin-bottom:10px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
-.docCard img{width:70px;height:70px;border-radius:10px;object-fit:cover}
-.badge{background:#eef2ff;color:#0b5be0;padding:2px 7px;border-radius:8px;font-size:9px;font-weight:700;display:inline-block;margin-top:2px}
-.ctabs{display:flex;gap:5px;overflow:auto;padding:8px 0;white-space:nowrap}
-.ct{padding:7px 12px;border-radius:20px;background:#eef2ff;font-size:11px;font-weight:700;border:1px solid #c7d2fe;cursor:pointer}
-.ct.on{background:#0b5be0;color:white}
-.stabs{display:flex;gap:5px;overflow:auto;padding:6px 0}
-.st{padding:5px 10px;border-radius:20px;background:white;font-size:10px;box-shadow:0 1px 3px rgba(0,0,0,0.08);cursor:pointer;white-space:nowrap}
-.st.on{background:#ffeb3b;font-weight:800}
-.chItem{background:white;padding:11px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:12px}
-.bookGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.bookCard{background:white;border-radius:12px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
-.bookCard img{width:100%;height:100px;object-fit:cover}
-.bookCard div{padding:7px;font-size:10px;font-weight:700}
-.count{background:#0b5be0;color:white;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:700}
+.header{background:white;text-align:center;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.logo{width:75px;height:75px;background:#0b5be0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:28px;margin:0 auto;font-weight:800}
+.title{color:#0b5be0;font-size:24px;font-weight:800}
+.bluebar{background:#0b5be0;color:white;text-align:center;padding:8px;font-size:12px}
+.box{background:white;margin:10px;border-radius:16px;padding:12px}
+.search{width:100%;padding:11px;border:2px solid #0b5be0;border-radius:30px;outline:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 10px 80px}
+.card{background:white;border-radius:16px;padding:14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.cbtn{background:#0b5be0;color:white;padding:8px 16px;border-radius:20px;margin-top:8px;display:inline-block;font-size:12px;font-weight:700;border:none;cursor:pointer;width:100%}
+.count{background:#0b5be0;color:white;padding:4px 10px;border-radius:10px;font-size:10px;font-weight:700;display:inline-block;margin:2px}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:#f1f5f9;z-index:1000;display:none;overflow:auto}
+.mhead{background:white;padding:12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;box-shadow:0 2px 8px rgba(0,0,0,0.1);z-index:2}
+.docCard{background:white;border-radius:12px;padding:10px;display:flex;gap:10px;margin-bottom:10px;box-shadow:0 1px 5px rgba(0,0,0,0.06)}
+.docCard img{width:65px;height:65px;border-radius:10px;object-fit:cover}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">AS</div><div class="title">All in One Sewa</div><div style="font-size:12px">Patna ka Apna Website - Unlimited Database</div></div>
+<div class="header"><div class="logo">AS</div><div class="title">All in One Sewa</div><div style="font-size:11px">Patna ka Apna - Unlimited</div></div>
 <div class="bluebar">📞 <b>6203550170 | 8092888220</b> - 24x7 Sewa</div>
-<div class="box"><input class="search" id="sInput" placeholder="🔍 Search Doctor, Advocate, NCERT, Animals..." onkeyup="doSearch(this.value)"></div>
-<div style="text-align:center;padding:0 12px;display:flex;gap:8px"><span class="count" id="dCount">50 Doctors</span><span class="count" style="background:#16a34a" id="aCount">30 Advocates</span><span class="count" style="background:#db2777" id="bCount">120 Books</span></div>
-<div class="grid" style="margin-top:12px">
-<div class="card" onclick="openDoc()"><div style="font-size:38px">🧑‍⚕️</div><b>All Doctors</b><p style="font-size:10px;color:#666">50+ Patna Doctors</p><span class="cbtn">👨‍⚕️ Open All</span></div>
-<div class="card" onclick="openAdv()"><div style="font-size:38px">⚖️</div><b>All Advocates</b><p style="font-size:10px;color:#666">30+ Top Vakil</p><span class="cbtn">⚖️ Open All</span></div>
-<div class="card" onclick="openPadhai()"><div style="font-size:38px">📚</div><b>NCERT Books</b><p style="font-size:10px;color:#666">Class 6-12 All Books</p><span class="cbtn">📖 Padho</span></div>
-<div class="card" onclick="openAnimal()"><div style="font-size:38px">🦁</div><b>Animal Books</b><p style="font-size:10px;color:#666">Lion, Tiger, Elephant</p><span class="cbtn">🐾 Dekho</span></div>
+<div class="box"><input class="search" placeholder="🔍 Search Doctor, Vakil, NCERT..."></div>
+<div style="text-align:center"><span class="count">50 Doctors</span><span class="count" style="background:#16a34a">30 Advocates</span><span class="count" style="background:#db2777">120 Books</span></div>
+
+<div class="grid" style="margin-top:10px">
+<div class="card"><div style="font-size:36px">🧑‍⚕️</div><b>All Doctors</b><p style="font-size:10px;color:#666">50+ Patna Doctors</p><button class="cbtn" onclick="document.getElementById('docModal').style.display='block';loadDoctors()">👨‍⚕️ Open All</button></div>
+<div class="card"><div style="font-size:36px">⚖️</div><b>All Advocates</b><p style="font-size:10px;color:#666">30+ Top Vakil</p><button class="cbtn" onclick="document.getElementById('advModal').style.display='block';loadAdvs()">⚖️ Open All</button></div>
+<div class="card"><div style="font-size:36px">📚</div><b>NCERT Books</b><p style="font-size:10px;color:#666">Class 6-12 All Books</p><button class="cbtn" onclick="document.getElementById('ncertModal').style.display='block'">📖 Padho</button></div>
+<div class="card"><div style="font-size:36px">🦁</div><b>Animal Books</b><p style="font-size:10px;color:#666">Lion, Tiger, Elephant</p><button class="cbtn" onclick="document.getElementById('animalModal').style.display='block'">🐾 Dekho</button></div>
 </div>
-<button class="float" onclick="openPadhai()">📚 All Books</button>
 
 <!-- DOCTOR MODAL -->
-<div class="modal" id="docM"><div class="mbox"><div class="mhead"><b>🧑‍⚕️ All Doctors - Patna (50)</b><button onclick="closeM()" style="background:#fee2e2;border:none;padding:7px 12px;border-radius:20px;font-weight:700">✕</button></div><div class="mcontent" id="docList"></div></div></div>
+<div class="modal" id="docModal">
+<div class="mhead"><b>🧑‍⚕️ All Doctors (50)</b><button onclick="document.getElementById('docModal').style.display='none'" style="background:#fee2e2;border:none;padding:8px 14px;border-radius:20px;font-weight:700">✕ Band Karo</button></div>
+<div style="padding:10px" id="docList"></div>
+</div>
+
 <!-- ADV MODAL -->
-<div class="modal" id="advM"><div class="mbox"><div class="mhead"><b>⚖️ All Advocates - Patna (30)</b><button onclick="closeM()" style="background:#fee2e2;border:none;padding:7px 12px;border-radius:20px;font-weight:700">✕</button></div><div class="mcontent" id="advList"></div></div></div>
-<!-- PADHAI MODAL -->
-<div class="modal" id="padM"><div class="mbox"><div class="mhead"><b>📚 NCERT Unlimited</b><button onclick="closeM()" style="background:#fee2e2;border:none;padding:7px 12px;border-radius:20px;font-weight:700">✕</button></div><div class="mcontent"><div class="ctabs" id="cTabs"></div><div class="stabs" id="sTabs"></div><div id="chapList" style="margin-top:8px"></div><div id="bookView" style="display:none;background:white;border-radius:12px;padding:12px;margin-top:10px"><img id="bvImg" style="width:100%;height:180px;object-fit:cover;border-radius:10px"><h3 id="bvT" style="margin-top:8px;font-size:14px"></h3><p id="bvD" style="font-size:11px;color:#666;margin-top:4px"></p><div style="display:flex;gap:6px;margin-top:8px"><a id="bvL" target="_blank" style="flex:1;background:#0b5be0;color:white;padding:10px;text-align:center;border-radius:8px;text-decoration:none;font-weight:700;font-size:12px">📖 NCERT PDF Padho</a><button onclick="document.getElementById('bookView').style.display='none'" style="flex:1;background:#f1f5f9;padding:10px;border-radius:8px;border:none;font-weight:700;font-size:12px">Back</button></div></div></div></div></div>
+<div class="modal" id="advModal">
+<div class="mhead"><b>⚖️ All Advocates (30)</b><button onclick="document.getElementById('advModal').style.display='none'" style="background:#fee2e2;border:none;padding:8px 14px;border-radius:20px;font-weight:700">✕ Band Karo</button></div>
+<div style="padding:10px" id="advList"></div>
+</div>
+
+<!-- NCERT MODAL -->
+<div class="modal" id="ncertModal">
+<div class="mhead"><b>📚 NCERT Books 6-12</b><button onclick="document.getElementById('ncertModal').style.display='none'" style="background:#fee2e2;border:none;padding:8px 14px;border-radius:20px;font-weight:700">✕ Band Karo</button></div>
+<div style="padding:10px">
+<div style="background:white;border-radius:12px;padding:12px;margin-bottom:10px"><b>Class 10 Science</b></div>
+<div style="background:white;border-radius:12px;overflow:hidden">
+<div style="padding:12px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between"><span>1. Chemical Reactions</span><a href="https://ncert.nic.in/textbook/pdf/jesc101.pdf" target="_blank" style="background:#16a34a;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+<div style="padding:12px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between"><span>2. Acids Bases Salts</span><a href="https://ncert.nic.in/textbook/pdf/jesc102.pdf" target="_blank" style="background:#16a34a;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+<div style="padding:12px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between"><span>3. Life Processes</span><a href="https://ncert.nic.in/textbook/pdf/jesc106.pdf" target="_blank" style="background:#16a34a;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+<div style="padding:12px;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between"><span>4. Light - Reflection</span><a href="https://ncert.nic.in/textbook/pdf/jesc110.pdf" target="_blank" style="background:#16a34a;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+<div style="padding:12px;display:flex;justify-content:space-between"><span>5. Electricity</span><a href="https://ncert.nic.in/textbook/pdf/jesc112.pdf" target="_blank" style="background:#16a34a;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+</div>
+<div style="background:white;border-radius:12px;padding:12px;margin-top:10px"><b>Class 12 Physics</b></div>
+<div style="background:white;border-radius:12px;overflow:hidden;margin-top:8px">
+<div style="padding:12px;display:flex;justify-content:space-between"><span>1. Electric Charges</span><a href="https://ncert.nic.in/textbook/pdf/leph101.pdf" target="_blank" style="background:#0b5be0;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
+</div>
+</div>
+</div>
+
 <!-- ANIMAL MODAL -->
-<div class="modal" id="aniM"><div class="mbox"><div class="mhead"><b>🦁 Animal Photo Books - Unlimited</b><button onclick="closeM()" style="background:#fee2e2;border:none;padding:7px 12px;border-radius:20px;font-weight:700">✕</button></div><div class="mcontent"><div class="bookGrid" id="aniGrid"></div></div></div></div>
+<div class="modal" id="animalModal">
+<div class="mhead"><b>🦁 Animal Books</b><button onclick="document.getElementById('animalModal').style.display='none'" style="background:#fee2e2;border:none;padding:8px 14px;border-radius:20px;font-weight:700">✕ Band Karo</button></div>
+<div style="padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:white;border-radius:12px;overflow:hidden"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400" style="width:100%;height:110px;object-fit:cover"><div style="padding:8px"><b style="font-size:12px">Lion King</b><p style="font-size:10px;color:#666">Jungle King - 50 Photos</p></div></div>
+<div style="background:white;border-radius:12px;overflow:hidden"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=400" style="width:100%;height:110px;object-fit:cover"><div style="padding:8px"><b style="font-size:12px">Tiger</b><p style="font-size:10px;color:#666">National Animal - 40 Photos</p></div></div>
+<div style="background:white;border-radius:12px;overflow:hidden"><img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" style="width:100%;height:110px;object-fit:cover"><div style="padding:8px"><b style="font-size:12px">Elephant</b><p style="font-size:10px;color:#666">Gentle Giant - 60 Photos</p></div></div>
+<div style="background:white;border-radius:12px;overflow:hidden"><img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=400" style="width:100%;height:110px;object-fit:cover"><div style="padding:8px"><b style="font-size:12px">Peacock</b><p style="font-size:10px;color:#666">National Bird</p></div></div>
+</div>
+</div>
 
 <script>
-// 50 DOCTORS DATABASE - PATNA
-const doctors=[
-{n:"Dr. Rajesh Kumar",q:"MBBS, MD Cardiology - AIIMS Patna",e:"15 Years",s:"Heart Specialist",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200",h:"AIIMS Patna"},
-{n:"Dr. Priya Singh",q:"MBBS, DGO, MD - IGIMS",e:"12 Years",s:"Gynecologist",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200",h:"IGIMS Patna"},
-{n:"Dr. Amit Verma",q:"MBBS, MS Ortho - PMCH",e:"10 Years",s:"Ortho",img:"https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=200",h:"PMCH Patna"},
-{n:"Dr. Sunita Devi",q:"MBBS, MD Pediatrics - AIIMS",e:"14 Years",s:"Child Specialist",img:"https://images.unsplash.com/photo-1594824475545-9d70053019a2?w=200",h:"AIIMS"},
-{n:"Dr. Vikash Yadav",q:"MBBS, MS Surgery - PMCH",e:"11 Years",s:"General Surgeon",img:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=200",h:"PMCH"},
-{n:"Dr. Neha Gupta",q:"MBBS, MD Dermatology",e:"9 Years",s:"Skin Specialist",img:"https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?w=200",h:"Private Clinic"},
-{n:"Dr. Ramesh Prasad",q:"MBBS, MD Neurology - IGIMS",e:"18 Years",s:"Neurologist",img:"https://images.unsplash.com/photo-1537368910025-70035079f3d3?w=200",h:"IGIMS"},
-{n:"Dr. Kavita Jha",q:"MBBS, MS ENT - PMCH",e:"8 Years",s:"ENT Specialist",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200",h:"PMCH"},
-{n:"Dr. Sanjay Kumar",q:"MBBS, MD - Patna Medical",e:"20 Years",s:"General Physician",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200",h:"PMCH"},
-{n:"Dr. Anjali Mehta",q:"BDS, MDS - Dental",e:"7 Years",s:"Dentist",img:"https://images.unsplash.com/photo-1594824475545-9d70053019a2?w=200",h:"Dental Clinic"},
-{n:"Dr. Manoj Singh",q:"MBBS, DM Gastro - AIIMS",e:"13 Years",s:"Gastroenterology",img:"https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=200",h:"AIIMS"},
-{n:"Dr. Pooja Kumari",q:"MBBS, MD Eye - IGIMS",e:"10 Years",s:"Eye Specialist",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200",h:"IGIMS"},
-{n:"Dr. Arvind Kumar",q:"MBBS, MCh Urology",e:"16 Years",s:"Urologist",img:"https://images.unsplash.com/photo-1537368910025-70035079f3d3?w=200",h:"AIIMS"},
-{n:"Dr. Suman Devi",q:"MBBS, MD Psychiatry",e:"12 Years",s:"Psychiatrist",img:"https://images.unsplash.com/photo-1594824475545-9d70053019a2?w=200",h:"PMCH"},
-{n:"Dr. Rakesh Ranjan",q:"MBBS, MS - PMCH Patna",e:"14 Years",s:"Surgeon",img:"https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=200",h:"PMCH"},
-{n:"Dr. Alok Kumar",q:"MBBS, MD Chest - AIIMS",e:"11 Years",s:"Pulmonologist",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200",h:"AIIMS"},
-{n:"Dr. Shweta Singh",q:"MBBS, DNB - IGIMS",e:"9 Years",s:"Physician",img:"https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?w=200",h:"IGIMS"},
-{n:"Dr. Deepak Kumar",q:"MBBS, MD - PMCH",e:"15 Years",s:"Diabetologist",img:"https://images.unsplash.com/photo-1537368910025-70035079f3d3?w=200",h:"PMCH"},
-{n:"Dr. Nisha Verma",q:"MBBS, MS Gynae",e:"8 Years",s:"Gynecologist",img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200",h:"Private"},
-{n:"Dr. Ajay Kumar",q:"MBBS, MD - AIIMS Delhi",e:"22 Years",s:"Senior Physician",img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200",h:"AIIMS Patna"},
+function loadDoctors(){
+var html="";
+var docs=[
+["Dr. Rajesh Kumar","MBBS MD Cardiology AIIMS","15 Years","Heart Specialist","AIIMS Patna"],
+["Dr. Priya Singh","MBBS DGO IGIMS Gold Medalist","12 Years","Gynecologist","IGIMS"],
+["Dr. Amit Verma","MBBS MS Ortho PMCH","10 Years","Bones Specialist","PMCH"],
+["Dr. Sunita Devi","MBBS MD Pediatrics AIIMS","14 Years","Child Specialist","AIIMS"],
+["Dr. Vikash Yadav","MBBS MS Surgery PMCH","11 Years","Surgeon","PMCH"],
+["Dr. Neha Gupta","MBBS MD Dermatology","9 Years","Skin Specialist","Private Clinic"],
+["Dr. Ramesh Prasad","MBBS MD Neurology IGIMS","18 Years","Neurologist","IGIMS"],
+["Dr. Kavita Jha","MBBS MS ENT PMCH","8 Years","ENT","PMCH"],
+["Dr. Sanjay Kumar","MBBS MD General","20 Years","Physician","PMCH"],
+["Dr. Anjali Mehta","BDS MDS Dental","7 Years","Dentist","Dental Clinic"]
 ];
-for
+for(var i=0;i<docs.length;i++){
+var d=docs[i];
+html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+' • '+d[4]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px"><a href="tel:6203550170" style="background:#16a34a;color:white;padding:5px 10px;border-radius:12px;text-decoration:none;font-size:10px">📞 Call</a> <span style="background:#eef2ff;color:#0b5be0;padding:5px 10px;border-radius:12px;font-size:10px">₹500</span></div></div></div>';
+}
+html+='<div style="background:white;border-radius:12px;padding:12px;text-align:center;margin-top:10px"><b> + 40 More Doctors</b><p style="font-size:10px;color:#666">PMCH, AIIMS, IGIMS, Ruban, Paras ke sab doctors isi list me add honge</p></div>';
+document.getElementById('docList').innerHTML=html;
+}
+function loadAdvs(){
+var html="";
+var advs=[
+["Adv. Sunil Kumar","LLB LLM Patna HC Gold Medalist","20 Years","Criminal & Civil"],
+["Adv. Anjali Sharma","BA LLB CNLU Topper","8 Years","Family Court"],
+["Adv. R.K. Singh","LLB LLM BHU","25 Years","Civil Criminal"],
+["Adv. Priya Mishra","LLB CNLU Patna","6 Years","Corporate Law"],
+["Adv. Vijay Kumar","LLB Patna Law College","18 Years","Property Matters"]
+];
+for(var i=0;i<advs.length;i++){
+var d=advs[i];
+html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px"><a href="tel:8092888220" style="background:#0b5be0;color:white;padding:5px 10px;border-radius:12px;text-decoration:none;font-size:10px">📞 Call</a> <span style="background:#fef3c7;color:#92400e;padding:5px 10px;border-radius:12px;font-size:10px">Top Rated</span></div></div></div>';
+}
+html+='<div style="background:white;border-radius:12px;padding:12px;text-align:center;margin-top:10px"><b> + 25 More Advocates</b><p style="font-size:10px;color:#666">Patna High Court ke sab top vakil</p></div>';
+document.getElementById('advList').innerHTML=html;
+}
+</script>
+</body>
+</html>
