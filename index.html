@@ -2,63 +2,76 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Padhai Reels - Class 8 to 12</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All in One Sewa - Patna ka Apna Website</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#000;color:#fff}
-.h{background:linear-gradient(90deg,#0b3d91,#1e88e5);padding:12px;text-align:center;position:sticky;top:0}
-.tabs{display:flex;gap:6px;overflow:auto;padding:10px;background:#111}
-.t{padding:8px 14px;border-radius:20px;background:#222;border:1px solid #333;white-space:nowrap;font-size:13px}
-.t.a{background:#1e88e5}
-.subs{display:flex;gap:6px;overflow:auto;padding:8px;background:#111;border-bottom:1px solid #222}
-.s{padding:6px 12px;border-radius:15px;background:#222;font-size:12px;border:1px solid #333}
-.s.a{background:#ffeb3b;color:#000;font-weight:700}
-.main{display:flex}
-.left{width:40%;background:#111;height:calc(100vh - 110px);overflow:auto;border-right:1px solid #222}
-.right{flex:1;background:#000;display:flex;align-items:center;justify-content:center;padding:10px}
-.c{padding:10px;border-bottom:1px solid #222;font-size:13px}
-.c.a{background:#1e88e5}
-.box{width:100%;max-width:360px;background:#111;border-radius:15px;overflow:hidden}
-.vid{height:380px;background:linear-gradient(180deg,#1e3c72,#2a5298);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
-.btns{display:flex;gap:8px;padding:12px}
-.b{flex:1;padding:10px;border-radius:10px;border:none;font-weight:700}
-@media(max-width:600px){.main{flex-direction:column}.left{width:100%;height:200px}.right{height:60vh}}
+body{background:#f0f4f8}
+.header{background:white;text-align:center;padding:20px 10px}
+.logo-circle{width:90px;height:90px;background:#0b5be0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:36px;margin:0 auto}
+.title{color:#0b5be0;font-size:28px;font-weight:800;margin-top:10px}
+.subtitle{font-size:14px;margin-top:2px}
+.contact-bar{background:#0b5be0;color:white;text-align:center;padding:10px;font-size:14px}
+.contact-bar span{color:#ffeb3b;font-weight:700}
+.search-box{background:white;margin:15px;border-radius:20px;padding:15px;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.search-input{width:100%;padding:12px 15px;border:2px solid #0b5be0;border-radius:30px;outline:none}
+.btn-row{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.btn-call{background:linear-gradient(90deg,#16a34a,#15803d);color:white;padding:10px 20px;border-radius:30px;border:none;font-weight:700;display:flex;align-items:center;gap:5px}
+.btn-wa{background:#22c55e;color:white;padding:10px 20px;border-radius:30px;border:none;font-weight:700;display:flex;align-items:center;gap:5px}
+.sewa-title{text-align:center;font-size:22px;font-weight:800;margin:20px 0 10px 0;color:#1e293b}
+.sewa-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
+.sewa-card{background:white;border-radius:20px;padding:18px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.sewa-card .icon{font-size:36px}
+.sewa-card h3{margin:8px 0;font-size:16px}
+.contact-btn{background:#0b5be0;color:white;border:none;padding:8px 18px;border-radius:20px;font-size:13px}
 </style>
 </head>
 <body>
-<div class="h"><b>📚 Padhai Reels</b> - Class 8 to 12 <a href="index.html" style="color:#ffeb3b;float:right;text-decoration:none;">🏠 Home</a></div>
-<div class="tabs" id="ct"></div>
-<div class="subs" id="st"></div>
-<div class="main">
-<div class="left" id="cl"></div>
-<div class="right">
-<div class="box">
-<div class="vid" id="vb">
-<div style="font-size:70px" id="em">📚</div>
-<h2 id="rt" style="margin-top:15px">Chapter Select Karo</h2>
-<p id="rd" style="font-size:12px;color:#ddd;margin-top:6px">Upar Class aur Subject select karo</p>
+<div class="header">
+<div class="logo-circle">AS</div>
+<div class="title">All in One Sewa</div>
+<div class="subtitle">Patna ka Apna Website - Har Sewa Ek Jagah</div>
 </div>
-<div style="padding:12px;background:#1a1a1a">
-<b id="it">Koi chapter select karo</b>
-<p id="id" style="font-size:12px;color:#aaa;margin-top:4px">Chapter pe click karte hi yaha 3D reel dikhega</p>
-<div class="btns">
-<button class="b" style="background:#222;color:#fff;border:1px solid #444" onclick="alert('Doubt: '+currentChapter+' ka sawal pucho - AI jawab dega!')">❓ Sawal</button>
-<button class="b" style="background:#ffeb3b;color:#000" onclick="alert('MCQ Test: '+currentChapter+' - 5 sawal')">📝 Test</button>
+
+<div class="contact-bar">
+📞 <span>6203550170</span> | <span>8092888220</span> - Call / WhatsApp Karo
 </div>
+
+<div class="search-box">
+<input class="search-input" placeholder="🔍 Search Doctor, Vakil, Teacher...">
+<div class="btn-row">
+<button class="btn-call">📞 6203550170</button>
+<button class="btn-wa">💬 WhatsApp</button>
 </div>
-</div>
+<div class="btn-row">
+<button class="btn-call">📞 8092888220</button>
+<button class="btn-wa">💬 WhatsApp</button>
 </div>
 </div>
-<script>
-let D={"8":{"Science":["Crop Production","Microorganisms","Coal & Petroleum","Cell Structure","Force & Pressure","Light","Pollution"],"Maths":["Rational Numbers","Linear Equations","Quadrilaterals","Mensuration"]},"9":{"Science":["Matter in Surroundings","Atoms & Molecules","Motion","Gravitation","Work & Energy"],"Maths":["Number Systems","Polynomials","Triangles","Probability"]},"10":{"Science":["Chemical Reactions","Acids Bases","Life Processes","Light Reflection","Electricity"],"Maths":["Real Numbers","Quadratic Equations","Triangles","Trigonometry"]},"11":{"Physics":["Units & Measurement","Laws of Motion","Work Energy Power","Thermodynamics"],"Chemistry":["Structure of Atom","Chemical Bonding","Equilibrium"],"Biology":["Cell Unit of Life","Photosynthesis","Body Fluids"]},"12":{"Physics":["Electric Charges","Current Electricity","Ray Optics","Nuclei"],"Chemistry":["Solutions","Electrochemistry","Biomolecules"],"Biology":["Human Reproduction","Evolution","Biotechnology"]}};
-let E={"Science":"🧬","Maths":"📐","Physics":"⚛️","Chemistry":"🧪","Biology":"🌿"};
-let curC="10",curS="Science",curCh="";
-function init(){let c=document.getElementById('ct');c.innerHTML="";for(let i=8;i<=12;i++){let d=document.createElement('div');d.className='t'+(i==10?' a':'');d.innerText='Class '+i;d.onclick=()=>{document.querySelectorAll('.t').forEach(x=>x.classList.remove('a'));d.classList.add('a');curC=i;loadSub()};c.appendChild(d)}loadSub()}
-function loadSub(){let subs=Object.keys(D[curC]);curS=subs[0];let s=document.getElementById('st');s.innerHTML="";subs.forEach(x=>{let d=document.createElement('div');d.className='s'+(x==curS?' a':'');d.innerText=(E[x]||'📚')+' '+x;d.onclick=()=>{document.querySelectorAll('.s').forEach(y=>y.classList.remove('a'));d.classList.add('a');curS=x;loadCh()};s.appendChild(d)});loadCh()}
-function loadCh(){let L=D[curC][curS]||[];let cl=document.getElementById('cl');cl.innerHTML="<div style='padding:10px;font-weight:700;background:#1a1a1a'>📚 "+L.length+" Chapters</div>";L.forEach((ch,i)=>{let d=document.createElement('div');d.className='c'+(ch==curCh?' a':'');d.innerHTML=(i+1)+". "+ch+" <div style='font-size:10px;color:#aaa'>4 Reels • 3D</div>";d.onclick=()=>{curCh=ch;document.querySelectorAll('.c').forEach(x=>x.classList.remove('a'));d.classList.add('a');play(ch)};cl.appendChild(d)})}
-function play(ch){document.getElementById('em').innerText=E[curS]||'📚';document.getElementById('rt').innerText=ch;document.getElementById('rd').innerText="Class "+curC+" "+curS+" • 3D Reel";document.getElementById('it').innerText=ch+" - Part 1";document.getElementById('id').innerText=ch+" ko 4 parts me 3D animation ke sath samjho. Ye reel ab chal rahi hai!";let g=["linear-gradient(180deg,#1e3c72,#2a5298)","linear-gradient(180deg,#0f9b0f,#3a7d44)","linear-gradient(180deg,#8e0e00,#1f1c18)","linear-gradient(180deg,#673ab7,#512da8)"];document.getElementById('vb').style.background=g[Math.floor(Math.random()*g.length)]}
-init();loadCh();
-</script>
+
+<div class="sewa-title">🙏 Hamari Sewa</div>
+<div class="sewa-grid">
+<div class="sewa-card">
+<div class="icon">🧑‍⚕️</div>
+<h3>Doctor</h3>
+<button class="contact-btn">Contact</button>
+</div>
+<div class="sewa-card">
+<div class="icon">⚖️</div>
+<h3>Advocate</h3>
+<button class="contact-btn">Contact</button>
+</div>
+<div class="sewa-card">
+<div class="icon">🧑‍🏫</div>
+<h3>Teacher</h3>
+<button class="contact-btn">Contact</button>
+</div>
+<div class="sewa-card">
+<div class="icon">🔧</div>
+<h3>Mistri</h3>
+<button class="contact-btn">Contact</button>
+</div>
+</div>
+<br><br>
 </body>
 </html>
