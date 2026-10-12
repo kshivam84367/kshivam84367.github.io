@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padhai Reels - Class 8 to 12</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:#0a0a0a;color:white;}
+.header{background:linear-gradient(90deg,#0b3d91,#1e88e5);padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.logo{font-weight:900;font-size:20px;}.logo span{color:#ffeb3b;}
+.tag{font-size:11px;background:#ffeb3b;color:#000;padding:2px 8px;border-radius:20px;font-weight:700;margin-left:8px;}
+.top-search{padding:12px;background:#121212;display:flex;gap:8px;position:sticky;top:54px;z-index:99;}
+.top-search input{flex:1;padding:12px 15px;border-radius:30px;border:1px solid #333;background:#1e1e1e;color:white;outline:none;}
+.top-search button{background:#1e88e5;border:none;padding:12px 18px;border-radius:30px;color:white;font-weight:700;}
+.class-tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;background:#121212;}
+.tab{white-space:nowrap;padding:8px 16px;border-radius:20px;background:#1e1e1e;border:1px solid #333;font-size:13px;font-weight:600;cursor:pointer;}
+.tab.active{background:#1e88e5;border-color:#1e88e5;}
+.subjects{display:flex;gap:8px;overflow-x:auto;padding:8px 12px;background:#121212;border-bottom:1px solid #222;}
+.sub{padding:6px 14px;border-radius:18px;background:#222;font-size:12px;cursor:pointer;border:1px solid #333;}
+.sub.active{background:#ffeb3b;color:#000;font-weight:700;}
+.main{display:flex;height:calc(100vh - 180px);}
+.chapters{width:35%;background:#121212;border-right:1px solid #222;overflow-y:auto;}
+.ch-head{padding:12px;font-weight:700;font-size:14px;background:#1a1a1a;position:sticky;top:0;}
+.ch-item{padding:12px;border-bottom:1px solid #222;cursor:pointer;display:flex;justify-content:space-between;}
+.ch-item.active{background:#1e88e5;}
+.ch-name{font-size:13px;}.ch-meta{font-size:10px;color:#aaa;margin-top:3px;}
+.reel-area{flex:1;background:#000;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.reel-card{width:100%;max-width:380px;height:100%;background:#111;display:flex;flex-direction:column;}
+.video-box{flex:1;background:linear-gradient(180deg,#1e3c72,#2a5298);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;}
+.video-box.emoji{font-size:80px;}
+.badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);padding:4px 8px;border-radius:10px;font-size:11px;}
+.progress{position:absolute;bottom:0;left:0;height:4px;background:#1e88e5;width:45%;}
+.reel-info{padding:12px;background:#121212;}
+.reel-title{font-size:14px;font-weight:700;}
+.reel-desc{font-size:12px;color:#aaa;margin-top:4px;}
+.actions{display:flex;gap:10px;margin-top:10px;}
+.act{flex:1;padding:10px;border-radius:10px;border:none;font-weight:700;font-size:12px;cursor:pointer;}
+.act.q{background:#222;color:white;border:1px solid #444;}
+.act.test{background:#ffeb3b;color:#000;}
+.side-tools{position:absolute;right:10px;bottom:120px;display:flex;flex-direction:column;gap:15px;align-items:center;}
+.tool{width:45px;height:45px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:200;padding:15px;}
+.modal.active{display:flex;}
+.modal-box{background:#1e1e1e;width:100%;max-width:400px;border-radius:15px;padding:18px;}
+.mcq-opt{padding:10px;background:#2a2a2a;border-radius:10px;margin:8px 0;cursor:pointer;border:1px solid #333;font-size:13px;}
+.mcq-opt.correct{background:#2e7d32;}.mcq-opt.wrong{background:#c62828;}
+@media(max-width:700px){.main{flex-direction:column;}.chapters{width:100%;max-height:220px;}.reel-area{height:70vh;}}
+</style>
+</head>
+<body>
+<div class="header"><div><span class="logo">AS <span>Padhai Reels</span></span><span class="tag">Class 8-12</span></div><div style="font-size:12px;">Sabka Sath Sabka Vikas</div></div>
+<div class="top-search"><input id="searchBox" placeholder="🔍 Chapter bolo - jaise 'Photosynthesis'..."><button onclick="searchChapter()">Search</button></div>
+<div class="class-tabs" id="classTabs"></div>
+<div class="subjects" id="subjectTabs"></div>
+<div class="main">
+<div class="chapters"><div class="ch-head">📚 Chapters - <span id="chCount">0</span></div><div id="chapterList"></div></div>
+<div class="reel-area">
+<div class="reel-card">
+<div class="video-box" id="videoBox"><div class="badge">▶️ Part 1/4 • 1:30 min</div><div class="emoji" id="emojiIcon">🧬</div><div style="margin-top:15px;font-size:22px;font-weight:800;text-align:center;padding:0 20px;" id="reelMainTitle">Chapter Select Karo</div><div style="font-size:12px;color:#ddd;margin-top:8px;text-align:center;" id="reelSubTitle">3D Animation me samjho</div><div class="progress"></div>
+<div class="side-tools"><div class="tool" onclick="openDoubt()">❓</div><div class="tool" onclick="openTest()">📝</div><div class="tool">❤️</div><div class="tool">↗️</div></div>
+</div>
+<div class="reel-info"><div class="reel-title" id="infoTitle">Koi chapter select karo</div><div class="reel-desc" id="infoDesc">Class aur subject upar se select karo, fir chapter pe click karo - turant 3D reels start hongi.</div><div class="actions"><button class="act q" onclick="openDoubt()">❓ Sawal Puchho</button><button class="act test" onclick="openTest()">📝 MCQ Test</button></div></div>
+</div>
+</div>
+</div>
+<div class="modal" id="doubtModal"><div class="modal-box"><h3>❓ Doubt Puchho</h3><p style="font-size:12px;color:#aaa;margin:8px 0;" id="doubtChapterName">Doubt likho</p><input id="doubtInput" placeholder="Jaise - Ye kaise hota hai?" style="width:100%;padding:12px;border-radius:10px;background:#2a2a2a;border:1px solid #444;color:white;margin:10px 0;"><div id="doubtAnswer" style="background:#0d2a54;padding:12px;border-radius:10px;font-size:13px;display:none;margin-top:10px;"></div><div style="display:flex;gap:10px;margin-top:12px;"><button onclick="askDoubt()" style="flex:1;padding:12px;background:#1e88e5;border:none;border-radius:10px;color:white;font-weight:700;">Puchho</button><button onclick="closeModal('doubtModal')" style="flex:1;padding:12px;background:#333;border:none;border-radius:10px;color:white;">Band</button></div></div></div>
+<div class="modal" id="testModal"><div class="modal-box"><h3>📝 MCQ Test - <span id="testTitle">Chapter</span></h3><div id="mcqBox" style="margin-top:12px;"></div><div style="display:flex;gap:10px;margin-top:12px;"><button onclick="closeModal('testModal')" style="flex:1;padding:12px;background:#333;border:none;border-radius:10px;color:white;">Band</button><button onclick="loadMCQ()" style="flex:1;padding:12px;background:#ffeb3b;border:none;border-radius:10px;color:#000;font-weight:700;">Next</button></div></div></div>
+<script>
+const data={"8":{"Science":["Crop Production","Microorganisms","Coal & Petroleum","Combustion","Conservation","Cell Structure","Force & Pressure","Friction","Sound","Chemical Effects","Light","Stars & Solar System","Pollution"],"Maths":["Rational Numbers","Linear Equations","Quadrilaterals","Data Handling","Squares & Roots","Cubes","Comparing Quantities","Algebraic Expressions","Mensuration","Exponents","Factorisation","Graphs"],"English":["Tenses","Active Passive","The Best Christmas Present"]},"9":{"Science":["Matter in Our Surroundings","Is Matter Pure","Atoms & Molecules","Structure of Atom","Cell - Basic Unit","Tissues","Motion","Force & Laws","Gravitation","Work & Energy","Sound"],"Maths":["Number Systems","Polynomials","Coordinate Geometry","Linear Equations","Triangles","Quadrilaterals","Circles","Statistics","Probability"]},"10":{"Science":["Chemical Reactions","Acids Bases Salts","Metals & Non-metals","Carbon & Compounds","Life Processes","Control & Coordination","Reproduction","Heredity","Light - Reflection","Human Eye","Electricity","Magnetic Effects","Environment"],"Maths":["Real Numbers","Polynomials","Linear Equations","Quadratic Equations","AP","Triangles","Trigonometry","Circles","Surface Areas","Statistics","Probability"]},"11":{"Physics":["Units & Measurement","Motion in Straight Line","Motion in Plane","Laws of Motion","Work Energy Power","Gravitation","Thermodynamics","Oscillations","Waves"],"Chemistry":["Basic Concepts","Structure of Atom","Periodicity","Chemical Bonding","States of Matter","Thermodynamics","Equilibrium","Organic Chemistry"],"Maths":["Sets","Relations & Functions","Trigonometric Functions","Complex Numbers","Permutations","Binomial Theorem","Sequence & Series","Straight Lines","Conic Sections","Limits & Derivatives"],"Biology":["Living World","Biological Classification","Plant Kingdom","Animal Kingdom","Cell - Unit of Life","Biomolecules","Photosynthesis","Respiration","Body Fluids"]},"12":{"Physics":["Electric Charges & Fields","Electrostatic Potential","Current Electricity","Moving Charges & Magnetism","EMI","AC","Ray Optics","Wave Optics","Dual Nature","Atoms","Nuclei","Semiconductors"],"Chemistry":["Solid State","Solutions","Electrochemistry","Chemical Kinetics","p-Block","d & f Block","Coordination Compounds","Aldehydes Ketones","Amines","Biomolecules"],"Maths":["Relations & Functions","Matrices","Determinants","Continuity","Integrals","Differential Equations","Vectors","3D Geometry","Probability"],"Biology":["Reproduction in Organisms","Human Reproduction","Heredity & Variation","Molecular Basis","Evolution","Human Health & Disease","Biotechnology","Ecosystem","Biodiversity"]}};
+const emojis={"Science":"🧬","Maths":"📐","Physics":"⚛️","Chemistry":"🧪","Biology":"🌿","English":"📖"};let currentClass="10",currentSubject="Science",currentChapter="";
+function init(){let ct=document.getElementById('classTabs');ct.innerHTML="";for(let c=8;c<=12;c++){let d=document.createElement('div');d.className='tab'+(c==10?' active':'');d.innerText='Class '+c;d.onclick=()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));d.classList.add('active');currentClass=c;loadSubjects();};ct.appendChild(d);}loadSubjects();}
+function loadSubjects(){let subs=Object.keys(data[currentClass]);currentSubject=subs[0];let st=document.getElementById('subjectTabs');st.innerHTML="";subs.forEach(s=>{let d=document.createElement('div');d.className='sub'+(s==currentSubject?' active':'');d.innerText=(emojis[s]||'📚')+' '+s;d.onclick=()=>{document.querySelectorAll('.sub').forEach(t=>t.classList.remove('active'));d.classList.add('active');currentSubject=s;loadChapters();};st.appendChild(d);});loadChapters();}
+function loadChapters(filter=""){let list=data[currentClass][currentSubject]||[];if(filter){list=list.filter(ch=>ch.toLowerCase().includes(filter.toLowerCase()));}document.getElementById('chCount').innerText=list.length;let cl=document.getElementById('chapterList');cl.innerHTML="";list.forEach((ch,i)=>{let d=document.createElement('div');d.className='ch-item'+(ch==currentChapter?' active':'');d.innerHTML=`<div><div class="ch-name">${i+1}. ${ch}</div><div class="ch-meta">4 Reels • 3D • Hindi+English</div></div><div>▶️</div>`;d.onclick=()=>{currentChapter=ch;playChapter(ch);document.querySelectorAll('.ch-item').forEach(x=>x.classList.remove('active'));d.classList.add('active');};cl.appendChild(d);});}
+function playChapter(ch){document.getElementById('emojiIcon').innerText=emojis[currentSubject]||'📚';document.getElementById('reelMainTitle').innerText=ch;document.getElementById('reelSubTitle').innerText=`Class ${currentClass} ${currentSubject} • 3D Animation`;document.getElementById('infoTitle').innerText=`${ch} - Part 1 (3D Reel)`;document.getElementById('infoDesc').innerText=`${ch} ko 4 chote parts me tod ke 3D animation ke sath samjhaya gaya hai. Swipe karo next part dekhne ke liye.`;document.getElementById('testTitle').innerText=ch;document.getElementById('doubtChapterName').innerText=ch+' - doubt pucho';let grads=["linear-gradient(180deg,#1e3c72,#2a5298)","linear-gradient(180deg,#0f9b0f,#3a7d44)","linear-gradient(180deg,#8e0e00,#1f1c18)","linear-gradient(180deg,#673ab7,#512da8)"];document.getElementById('videoBox').style.background=grads[Math.floor(Math.random()*grads.length)];}
+function searchChapter(){let q=document.getElementById('searchBox').value;if(!q){loadChapters();return;}for(let c in data){for(let s in data[c]){data[c][s].forEach(ch=>{if(ch.toLowerCase().includes(q.toLowerCase())){currentClass=c;currentSubject=s;document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');if(t.innerText.includes(c))t.classList.add('active');});loadSubjects();setTimeout(()=>{loadChapters(q);playChapter(ch);},300);}});}}
+function openDoubt(){if(!currentChapter){alert('Pehle chapter select karo!');return;}document.getElementById('doubtModal').classList.add('active');}
+function closeModal(id){document.getElementById(id).classList.remove('active');}
+function askDoubt(){let q=document.getElementById('doubtInput').value;if(!q)return;let ans=document.getElementById('doubtAnswer');ans.style.display='block';ans.innerHTML=`🤖 <b>AI Answer for "${currentChapter}":</b><br><br>${q} - Bahut accha sawal! ${currentChapter} me iska matlab hai ki... <br><br><b>3D me samjho:</b> Socho ki ye ek process hai...<br><br>💡 <i>Reel Part 2 me animation hai!</i>`;}
+function openTest(){if(!currentChapter){alert('Pehle chapter select karo!');return;}document.getElementById('testModal').classList.add('active');loadMCQ();}
+const sampleMCQs=[{q:"Is chapter ka main concept kya hai?",opts:["Basic Definition","Advanced Theory","Practical Example","All of above"],ans:3},{q:"Ye process kahan hota hai?",opts:["Option A","Option B","Option C","Option D"],ans:1}];let mcqIndex=0;
+function loadMCQ(){let mcq=sampleMCQs[mcqIndex%sampleMCQs.length];mcqIndex++;let box=document.getElementById('mcqBox');box.innerHTML=`<div style="font-weight:700;font-size:14px;margin-bottom:10px;">Q${mcqIndex}. ${mcq.q} (${currentChapter})</div>`+mcq.opts.map((o,i)=>`<div class="mcq-opt" onclick="checkMCQ(this,${i},${mcq.ans})">${o}</div>`).join('')+`<div id="mcqExplain" style="display:none;margin-top:10px;padding:10px;background:#0d2a54;border-radius:8px;font-size:12px;">✅ Sahi jawab: ${mcq.opts[mcq.ans]} <br> Explanation: Part 2 ki reel me 3D me dikhaya gaya hai.</div>`;}
+function checkMCQ(el,i,ans){document.querySelectorAll('.mcq-opt').forEach(o=>o.style.pointerEvents='none');if(i==ans){el.classList.add('correct');}else{el.classList.add('wrong');document.querySelectorAll('.mcq-opt')[ans].classList.add('correct');}document.getElementById('mcqExplain').style.display='block';}
+init();loadChapters();
+</script>
+</body>
+</html>
