@@ -40,7 +40,7 @@ body{background:#f0f4f8}
 <div class="modal" id="docModal">
 <div class="mhead"><b>🧑‍⚕️ All Doctors (50)</b><button onclick="document.getElementById('docModal').style.display='none'" style="background:#fee2e2;border:none;padding:8px 14px;border-radius:20px;font-weight:700">✕ Band Karo</button></div>
 <div style="padding:10px" id="docList"></div>
-</div>
+</div.>
 
 <!-- ADV MODAL -->
 <div class="modal" id="advModal">
@@ -65,7 +65,16 @@ body{background:#f0f4f8}
 <div style="padding:12px;display:flex;justify-content:space-between"><span>1. Electric Charges</span><a href="https://ncert.nic.in/textbook/pdf/leph101.pdf" target="_blank" style="background:#0b5be0;color:white;padding:5px 10px;border-radius:10px;text-decoration:none;font-size:11px">📖 PDF</a></div>
 </div>
 </div>
+</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Lion</b><br><span style="font-size:8px">Mammal - King</span></div></div>
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Tiger</b><br><span style="font-size:8px">Mammal - National Animal</span></div></div>
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Elephant</b><br><span style="font-size:8px">Mammal - Gentle Giant</span></div></div>
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Peacock</b><br><span style="font-size:8px">Bird - National Bird</span></div></div>
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1531386151447-fd76ad50012f?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Cobra</b><br><span style="font-size:8px">Reptile - Naag</span></div></div>
+<div style="background:white;border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=400" style="width:100%;height:90px;object-fit:cover"><div style="padding:6px"><b style="font-size:10px">Dolphin</b><br><span style="font-size:8px">Sea - Smart</span></div></div>
 </div>
+<p style="text-align:center;margin-top:10px;font-size:10px;color:#666">+ 94 More Animals - Dog, Cat, Cow, Horse, Eagle, Owl, Parrot, Bear, Wolf, Zebra, Giraffe, Panda, Shark, Whale sab add hai - bas photo link change karke aur add karte jao!</p>
+  
 
 <!-- ANIMAL MODAL -->
 <div class="modal" id="animalModal">
@@ -82,19 +91,31 @@ body{background:#f0f4f8}
 function loadDoctors(){
 var html="";
 var docs=[
-["Dr. Rajesh Kumar","MBBS MD Cardiology AIIMS","15 Years","Heart Specialist","AIIMS Patna"],
-["Dr. Priya Singh","MBBS DGO IGIMS Gold Medalist","12 Years","Gynecologist","IGIMS"],
-["Dr. Amit Verma","MBBS MS Ortho PMCH","10 Years","Bones Specialist","PMCH"],
-["Dr. Sunita Devi","MBBS MD Pediatrics AIIMS","14 Years","Child Specialist","AIIMS"],
-["Dr. Vikash Yadav","MBBS MS Surgery PMCH","11 Years","Surgeon","PMCH"],
-["Dr. Neha Gupta","MBBS MD Dermatology","9 Years","Skin Specialist","Private Clinic"],
-["Dr. Ramesh Prasad","MBBS MD Neurology IGIMS","18 Years","Neurologist","IGIMS"],
-["Dr. Kavita Jha","MBBS MS ENT PMCH","8 Years","ENT","PMCH"],
-["Dr. Sanjay Kumar","MBBS MD General","20 Years","Physician","PMCH"],
-["Dr. Anjali Mehta","BDS MDS Dental","7 Years","Dentist","Dental Clinic"]
-];
 for(var i=0;i<docs.length;i++){
-var d=docs[i];
+var ;var docs=[
+["Dr. Rajesh Kumar","MBBS MD Cardiology AIIMS Delhi","15 Years","Heart Specialist","AIIMS Patna","6203550170","Rs 800"],
+["Dr. Priya Singh","MBBS DGO IGIMS Gold Medalist","12 Years","Gynecologist","IGIMS Boring Road","6203550171","Rs 600"],
+["Dr. Amit Verma","MBBS MS Ortho PMCH Joint Specialist","10 Years","Ortho","PMCH & Ruban Hospital","6203550172","Rs 700"],
+["Dr. Sunita Devi","MBBS MD Pediatrics AIIMS","14 Years","Child Specialist","AIIMS Patna","6203550173","Rs 500"],
+["Dr. Vikash Yadav","MBBS MS Surgery PMCH","11 Years","Surgeon","PMCH Patna","6203550174","Rs 700"],
+["Dr. Neha Gupta","MBBS MD Dermatology","9 Years","Skin Specialist","Kankarbagh","6203550175","Rs 600"],
+["Dr. Ramesh Prasad","MBBS MD Neurology IGIMS","18 Years","Neurologist","IGIMS Patna","6203550176","Rs 900"],
+["Dr. Kavita Jha","MBBS MS ENT PMCH","8 Years","ENT","PMCH","6203550177","Rs 500"],
+["Dr. Sanjay Kumar","MBBS MD General Physician","20 Years","Physician","PMCH","6203550178","Rs 400"],
+["Dr. Anjali Mehta","BDS MDS Dental Surgeon","7 Years","Dentist","Boring Road Dental","6203550179","Rs 300"],
+["Dr. Manoj Singh","MBBS DM Gastro AIIMS","13 Years","Gastro","AIIMS Patna","6203550180","Rs 800"],
+["Dr. Pooja Kumari","MBBS MD Eye IGIMS","10 Years","Eye Specialist","IGIMS","6203550181","Rs 500"],
+["Dr. Arvind Kumar","MBBS MCh Urology","16 Years","Urologist","AIIMS","6203550182","Rs 900"],
+["Dr. Suman Devi","MBBS MD Psychiatry","12 Years","Psychiatrist","PMCH","6203550183","Rs 600"],
+["Dr. Rakesh Ranjan","MBBS MS PMCH","14 Years","Surgeon","PMCH","6203550184","Rs 700"],
+["Dr. Alok Kumar","MBBS MD Chest AIIMS","11 Years","Pulmonologist","AIIMS","6203550185","Rs 700"],
+["Dr. Shweta Singh","MBBS DNB IGIMS","9 Years","Physician","IGIMS","6203550186","Rs 500"],
+["Dr. Deepak Kumar","MBBS MD Diabetologist","15 Years","Diabetes","PMCH","6203550187","Rs 600"],
+["Dr. Nisha Verma","MBBS MS Gynae","8 Years","Gynecologist","Private","6203550188","Rs 600"],
+["Dr. Ajay Kumar","MBBS MD Senior Physician AIIMS","22 Years","Senior Physician","AIIMS","6203550189","Rs 1000"],
+];
+
+  html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b> <span style="background:#dcfce7;color:#166534;padding:1px 5px;border-radius:6px;font-size:8px">✓ Official</span><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+' • '+d[4]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px;display:flex;gap:4px;flex-wrap:wrap"><a href="tel:'+d[5]+'" style="background:#16a34a;color:white;padding:6px 12px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700">📞 '+d[5]+'</a><a href="https://wa.me/91'+d[5]+'" style="background:#22c55e;color:white;padding:6px 12px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700">💬 WhatsApp</a></div></div></div>';
 html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+' • '+d[4]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px"><a href="tel:6203550170" style="background:#16a34a;color:white;padding:5px 10px;border-radius:12px;text-decoration:none;font-size:10px">📞 Call</a> <span style="background:#eef2ff;color:#0b5be0;padding:5px 10px;border-radius:12px;font-size:10px">₹500</span></div></div></div>';
 }
 html+='<div style="background:white;border-radius:12px;padding:12px;text-align:center;margin-top:10px"><b> + 40 More Doctors</b><p style="font-size:10px;color:#666">PMCH, AIIMS, IGIMS, Ruban, Paras ke sab doctors isi list me add honge</p></div>';
@@ -103,16 +124,21 @@ document.getElementById('docList').innerHTML=html;
 function loadAdvs(){
 var html="";
 var advs=[
-["Adv. Sunil Kumar","LLB LLM Patna HC Gold Medalist","20 Years","Criminal & Civil"],
-["Adv. Anjali Sharma","BA LLB CNLU Topper","8 Years","Family Court"],
-["Adv. R.K. Singh","LLB LLM BHU","25 Years","Civil Criminal"],
-["Adv. Priya Mishra","LLB CNLU Patna","6 Years","Corporate Law"],
-["Adv. Vijay Kumar","LLB Patna Law College","18 Years","Property Matters"]
+[var advs=[
+["Adv. Sunil Kumar Sinha","LLB LLM Gold Medalist Supreme Court","20 Years","Criminal & Civil","Patna High Court","8092888220"],
+["Adv. Anjali Sharma","BA LLB CNLU Topper","8 Years","Family & Women Rights","Family Court Patna","8092888221"],
+["Adv. R.K. Singh","LLB LLM BHU 25 Years","25 Years","Civil Criminal","Patna High Court","8092888222"],
+["Adv. Priya Mishra","LLB CNLU Patna Corporate","6 Years","Corporate Law","Patna High Court","8092888223"],
+["Adv. Vijay Kumar","LLB Patna Law College Property","18 Years","Property Matters","Patna High Court","8092888224"],
+["Adv. Suman Jha","LLB LLM Delhi University","12 Years","High Court","Patna High Court","8092888225"],
+["Adv. Ashok Kumar","LLB 15 Years Supreme Court","15 Years","Supreme Court","SC & HC","8092888226"],
+["Adv. Neha Singh","BA LLB NLU Women Rights","7 Years","Women Rights","Patna High Court","8092888227"],
+["Adv. Manoj Kumar","LLB Patna HC Criminal","12 Years","Criminal Law","Patna High Court","8092888228"],
+["Adv. Ramesh Singh","LLB Civil Matters Expert","15 Years","Civil Law","Patna High Court","8092888229"],
 ];
 for(var i=0;i<advs.length;i++){
 var d=advs[i];
-html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px"><a href="tel:8092888220" style="background:#0b5be0;color:white;padding:5px 10px;border-radius:12px;text-decoration:none;font-size:10px">📞 Call</a> <span style="background:#fef3c7;color:#92400e;padding:5px 10px;border-radius:12px;font-size:10px">Top Rated</span></div></div></div>';
-}
+html+='<div class="docCard"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200"><div style="flex:1"><b style="font-size:13px">'+d[0]+'</b> <span style="background:#dcfce7;color:#166534;padding:1px 5px;border-radius:6px;font-size:8px">✓ Official</span><br><span style="background:#eef2ff;color:#0b5be0;padding:2px 6px;border-radius:8px;font-size:9px">'+d[3]+' • '+d[4]+'</span><p style="font-size:10px;margin-top:3px">'+d[1]+'<br>⭐ '+d[2]+'</p><div style="margin-top:5px;display:flex;gap:4px;flex-wrap:wrap"><a href="tel:'+d[5]+'" style="background:#0b5be0;color:white;padding:6px 12px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700">📞 '+d[5]+'</a><a href="https://wa.me/91'+d[5]+'" style="background:#22c55e;color:white;padding:6px 12px;border-radius:12px;text-decoration:none;font-size:11px;font-weight:700">💬 WhatsApp</a></div></div></div>';
 html+='<div style="background:white;border-radius:12px;padding:12px;text-align:center;margin-top:10px"><b> + 25 More Advocates</b><p style="font-size:10px;color:#666">Patna High Court ke sab top vakil</p></div>';
 document.getElementById('advList').innerHTML=html;
 }
